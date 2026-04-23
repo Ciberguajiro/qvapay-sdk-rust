@@ -1,6 +1,6 @@
 [package]
 name = "qvapay-sdk"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["Ciberguajiro <hacedorthe@gmail.com>"]
 description = "Un SDK en Rust para la API de Pagos QVAPAY"
