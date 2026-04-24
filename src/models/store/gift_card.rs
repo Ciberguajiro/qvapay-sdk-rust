@@ -23,28 +23,28 @@ pub struct GiftCard {
 /// Respuesta de la Tienda en las tarjetas de regalo
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct StoreGiftCardResponse {
-    message: String,
-    data: Vec<GiftCard>,
+    pub message: String,
+    pub data: Vec<GiftCard>,
 }
 
 /// BodyParams for buy a gift card
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct StoreGiftCardBuyRequest {
-    code: String,
-    amout: i32,
+    pub code: String,
+    pub amout: i32,
 }
 
 /// Response of a buy of a giftCard
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct StoreGiftCardBuyResponse {
-    message: String,
-    data: StoreGiftCardBuyData,
+    pub message: String,
+    pub data: StoreGiftCardBuyData,
 }
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct StoreGiftCardBuyData {
-    transaction_uuid: String,
-    buyedService_id: String,
-    amout: f32,
-    status: String,
+    pub transaction_uuid: String,
+    pub buyedService_id: String,
+    pub amout: f32,
+    pub status: String,
 }

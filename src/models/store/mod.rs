@@ -13,7 +13,7 @@ pub struct StoreProduct {}
 /// Respuesta de la Tienda en general
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct StoreResponse {
-    message: String,
-    data: Vec<StoreProduct>,
+    pub message: String,
+    pub data: Vec<StoreProduct>,
 }
 
