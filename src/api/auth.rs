@@ -42,4 +42,9 @@ impl QvaPayClient {
     pub async fn logout(&self) -> Result<GeneralMessageResponse, SdkError> {
         self.get("/auth/logout").await
     }
+
+    /// Solicita un nuevo PIN para la recuperación de contraseña.
+    pub async fn request_pin(&self,params:RequestPinRequest) -> Result<GeneralMessageResponse, SdkError> {
+        self.post("/auth/request-pin", &params).await
+    }
 }

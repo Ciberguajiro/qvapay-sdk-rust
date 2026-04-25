@@ -14,6 +14,13 @@ pub struct AuthLoginRequest {
     pub two_factor_code: Option<String>,
 }
 
+/// Request for Request Pin.
+#[derive(Serialize, Deserialize, Debug, Clone)]
+pub struct RequestPinRequest {
+    pub email: String,
+    pub password: String,
+}
+
 /// Response for login when 2FA is required.
 #[derive(Deserialize, Debug, Clone)]
 pub struct AuthLoginResponse2FA {
